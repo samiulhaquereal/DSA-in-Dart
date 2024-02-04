@@ -35,13 +35,16 @@ void main() {
 
   int i = 0;
   while (i < 3) {
+    print('Enter Number');
     int input = int.parse(stdin.readLineSync().toString());
     stack.push(input);
     i++;
   }
 
-  print('Stack size: ${stack.size()}'); // Output: Stack size: 3
-  print('Peeked: ${stack.peek()}'); // Output: Peeked: 3
+  print('---------------------');
+  print(stack._items);
+  print('Stack size: ${stack.size()}');
+  print('Peeked: ${stack.peek()}');
 
   while (!stack.isEmpty()) {
     print('Popped: ${stack.pop()}');
